@@ -4,29 +4,30 @@
 <div class="container">
   <h1>Mobile Networks</h1>
   <br>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Coverage</th>
-
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @networks.each do |network| %>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
         <tr>
-          <td><%= network.name %></td>
-          <td><%= network.coverage %></td>
-          <td><%= link_to 'Show', network %></td>
-          <td><%= link_to 'Edit', edit_network_path(network) %></td>
-          <td><%= link_to 'Destroy', network, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <th>Name</th>
+          <th>Coverage</th>
+
+          <th colspan="3"></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
+      </thead>
+
+      <tbody>
+        <% @networks.each do |network| %>
+          <tr >
+            <td class="info"><%= network.name %></td>
+            <td class="active"><%= network.coverage %></td>
+            <td><%= link_to 'Show', network %></td>
+            <td><%= link_to 'Edit', edit_network_path(network) %></td>
+            <td><%= link_to 'Destroy', network, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
 
   <br>
 
