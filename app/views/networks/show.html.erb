@@ -16,52 +16,54 @@
   <%= link_to 'Back', networks_path %>
 
   <h2>Customers</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>First name</th>
-        <th>Last name</th>
-        <th>Age</th>
-        <th>Network</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
+  <div class="table-responsive">
+    <table class="table table-striped table-hover">
+      <thead>
+        <tr>
+          <th>First name</th>
+          <th>Last name</th>
+          <th>Age</th>
+          <th>Network</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @network.customers.each do |customer| %>
-      <tr>
-        <td><%= customer.first_name %></td>
-        <td><%= customer.last_name %></td>
-        <td><%= customer.age %></td>
-        <td><%= customer.network_id %></td>
+    <tbody>
+      <% @network.customers.each do |customer| %>
+        <tr>
+          <td><%= customer.first_name %></td>
+          <td><%= customer.last_name %></td>
+          <td><%= customer.age %></td>
+          <td><%= customer.network_id %></td>
 
-        <td><%= link_to 'Show', customer %></td>
-        <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-        <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-  </table>
+          <td><%= link_to 'Show', customer %></td>
+          <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+          <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+   </table>
+ </div>
 
   <h2>Add Customer</h2>
   <%= form_for([@network, @network.customers.build]) do |form| %>
 
-    <div class="field">
+    <div class="form-group">
       <%= form.label :first_name %>
       <%= form.text_field :first_name %>
     </div>
 
-    <div class="field">
+    <div class="form-group">
       <%= form.label :last_name %>
       <%= form.text_field :last_name %>
     </div>
 
-    <div class="field">
+    <div class="form-group">
       <%= form.label :network_id %>
       <%= form.text_field :network_id %>
     </div>
 
-    <div class="field">
+    <div class="form-group">
       <%= form.label :age %>
       <%= form.text_field :age %>
     </div>
@@ -70,4 +72,4 @@
       <%= form.submit %>
     </div>
   <% end %>
-</div>  
+</div>
