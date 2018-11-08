@@ -11,14 +11,60 @@
   </head>
 
   <body>
-    <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
-    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
-    <% else %>
-    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %> |
-    <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
-  <% end %>
-    <%= yield %>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Mobile Networks and Customers</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><%= link_to "Home", home_path %></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+          <li><%= link_to "Customers", mycustomer_path%></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.email %></strong>.
+        <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link' %>
+      <% else %>
+        <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
+     <% end %>
+   </div>
+   <div class="container">
+      <%= yield %>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><br><br><br><br>
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="section-heading">Let's Get In Touch!</h2>
+            
+            <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 ml-auto text-center">
+            <i class="fas fa-phone fa-3x mb-3 sr-contact-1" data-sr-id="6" style="visibility: visible; opacity: 0; transform: matrix3d(0.0002, 0, 0, 0, 0, 0.0002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"></i>
+            <p>123-456-6789</p>
+          </div>
+          <div class="col-lg-4 mr-auto text-center">
+            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2" data-sr-id="7" style="visibility: visible; opacity: 0; transform: matrix3d(0.0002, 0, 0, 0, 0, 0.0002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"></i>
+            <p>
+              <a href="mailto:your-email@your-domain.com">hadedayo@spartaglobal.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>
