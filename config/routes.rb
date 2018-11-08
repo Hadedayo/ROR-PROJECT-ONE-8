@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   resources :customers
 
   devise_for :users
-  
-  root "networks#index"
+
+  root "networks#index", as: 'home'
+  get "customers/show", as: 'mycustomer'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
