@@ -13,28 +13,29 @@
 
   <div class="field">
     <%= form.label :first_name %>
-    <input type="text" onfocus="myFunction(this)">
+    <%= form.text_field :first_name, :onfocus => "myFunction(this)" %>
+
   </div>
 
   <div class="field">
     <%= form.label :last_name %>
-    <input type="text" onfocus="myFunction(this)">
+    <%= form.text_field :last_name, :onfocus => "myFunction(this)" %>
   </div>
 
   <div class="field">
     <%= form.label :age %>
-    <input type="text" onfocus="myFunction(this)">
+    <%= form.text_field :age, :onfocus => "myFunction(this)" %>
   </div>
 
   <div class="field">
     <%= form.label :network_id %>
-    <input type="text" onfocus="myFunction(this)">
+    <%= form.text_field :network_id, :onfocus => "myFunction(this)" %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
-<% end %>
+  <% end %>
   <script>
   function myFunction(x) {
       x.style.background = "lightblue";
