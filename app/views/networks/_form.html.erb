@@ -1,3 +1,9 @@
+<script>
+function myFunction(x) {
+    x.style.background = "yellow";
+}
+</script>
+
 <%= form_with(model: network, local: true) do |form| %>
   <% if network.errors.any? %>
     <div id="error_explanation">
@@ -11,9 +17,11 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" >
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <div type="text" onfocus="myFunction(this)">
+      <%= form.text_field :name %>
+    </div>
   </div>
 
   <div class="field">
