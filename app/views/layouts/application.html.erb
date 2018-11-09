@@ -6,12 +6,15 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag  'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' %>
+
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "/dist/sweetalert.js"%>
+    <%=stylesheet_link_tag "/dist/sweetalert.css"%>
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-light" style="background-color: #FFA400;">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">Mobile Networks and Customers</a>
@@ -34,6 +37,7 @@
         <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
      <% end %>
    </div>
+   <br><br><br><br><br>
    <div class="container">
       <%= yield %>
     </div>
@@ -42,29 +46,5 @@
     <br>
     <br>
     <br><br><br><br><br>
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto text-center">
-            <h2 class="section-heading">Let's Get In Touch!</h2>
-            
-            <p class="mb-5">Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-4 ml-auto text-center">
-            <i class="fas fa-phone fa-3x mb-3 sr-contact-1" data-sr-id="6" style="visibility: visible; opacity: 0; transform: matrix3d(0.0002, 0, 0, 0, 0, 0.0002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"></i>
-            <p>123-456-6789</p>
-          </div>
-          <div class="col-lg-4 mr-auto text-center">
-            <i class="fas fa-envelope fa-3x mb-3 sr-contact-2" data-sr-id="7" style="visibility: visible; opacity: 0; transform: matrix3d(0.0002, 0, 0, 0, 0, 0.0002, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);"></i>
-            <p>
-              <a href="mailto:your-email@your-domain.com">hadedayo@spartaglobal.com</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
   </body>
 </html>
