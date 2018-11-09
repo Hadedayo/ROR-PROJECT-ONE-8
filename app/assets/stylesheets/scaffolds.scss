@@ -1,6 +1,5 @@
 body {
-  background-image: url('../images/capture.png');
-  color: #333;
+  color: black;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -9,7 +8,7 @@ body {
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 20px;
   line-height: 18px;
 }
 
@@ -23,12 +22,12 @@ a {
   color: #000;
 
   &:visited {
-    color: green;
+    color: #F44708;
   }
 
   &:hover {
     color: lightblue;
-    background-color: coral;
+    background-color: grey;
   }
 }
 
@@ -47,7 +46,7 @@ div {
 }
 
 #notice {
-  color: green;
+  color: #B33C86;
 }
 
 .field_with_errors {
