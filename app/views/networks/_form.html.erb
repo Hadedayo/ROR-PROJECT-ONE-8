@@ -1,4 +1,3 @@
-
 <%= form_with(model: network, local: true) do |form| %>
   <% if network.errors.any? %>
     <div id="error_explanation">
@@ -14,26 +13,25 @@
 
   <div class="field" >
     <%= form.label :name %>
-    <input type="text" onfocus="myFunction(this)">
+    <%= form.text_field :name, :onfocus => "myFunction(this)" %>
   </div>
 
   <div class="field">
     <%= form.label :coverage %>
-    <input type="text" onfocus="myFunction(this)">
+    <%= form.text_field :coverage, :onfocus => "myFunction(this)" %>
   </div>
 
 
 
   <div class="field">
     <%= form.label :user_id %>
-  <input type="text" onfocus="myFunction(this)">
+    <%= form.text_field :user_id, :onfocus => "myFunction(this)" %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
-<% end %>
-
+  <% end %>
 
   <script>
   function myFunction(x) {
