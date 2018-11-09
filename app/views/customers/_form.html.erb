@@ -13,25 +13,30 @@
 
   <div class="field">
     <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+    <input type="text" onfocus="myFunction(this)">
   </div>
 
   <div class="field">
     <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
+    <input type="text" onfocus="myFunction(this)">
   </div>
 
   <div class="field">
     <%= form.label :age %>
-    <%= form.number_field :age %>
+    <input type="text" onfocus="myFunction(this)">
   </div>
 
   <div class="field">
     <%= form.label :network_id %>
-    <%= form.number_field :network_id %>
+    <input type="text" onfocus="myFunction(this)">
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+  <script>
+  function myFunction(x) {
+      x.style.background = "lightblue";
+  }
+  </script>

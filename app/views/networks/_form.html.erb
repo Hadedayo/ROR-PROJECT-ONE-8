@@ -1,3 +1,4 @@
+
 <%= form_with(model: network, local: true) do |form| %>
   <% if network.errors.any? %>
     <div id="error_explanation">
@@ -11,22 +12,31 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" >
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <input type="text" onfocus="myFunction(this)">
   </div>
 
   <div class="field">
     <%= form.label :coverage %>
-    <%= form.text_field :coverage %>
+    <input type="text" onfocus="myFunction(this)">
   </div>
+
+
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+  <input type="text" onfocus="myFunction(this)">
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+
+  <script>
+  function myFunction(x) {
+      x.style.background = "deeppink";
+  }
+  </script>
