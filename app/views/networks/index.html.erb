@@ -1,11 +1,8 @@
 <div class="container">
+  <link rel="stylesheet" href="/indexNetwork.css">
 
 
-    <script src="dist/sweetalert.js"></script>
-    <link rel="stylesheet" href="/indexNetwork.css">
-
-
-     <p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
     <br><br>
 
     <div class="container">
@@ -26,7 +23,7 @@
             <% @networks.each do |network| %>
               <tr >
                 <td class="info"><%= network.name %></td>
-                <td class="active"><%= network.coverage %></td>
+                <td class="warning"><%= network.coverage %></td>
                 <td><%= link_to 'Show', network %></td>
                 <td><%= link_to 'Edit', edit_network_path(network) %></td>
                 <td><%= link_to 'Destroy', network, method: :delete, data: { confirm: 'Are you sure?' } %></td>
