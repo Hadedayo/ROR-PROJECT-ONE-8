@@ -9,20 +9,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  
+
   </head>
 
   <body>
-    <nav class="navbar navbar-default navbar-light" >
+    <nav class="navbar navbar-default navbar-light" style="background-color: #FFA400;" >
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">Mobile Networks and Customers</a>
+          <a class="navbar-brand"  style="color: white;">Mobile Networks and Customers</a>
         </div>
         <ul class="nav navbar-nav">
-            <li><%= link_to "Home", home_path %></li>
+            <li><%= link_to "Home", home_path, :style=>"color: white;"%></li>
         </ul>
         <ul class="nav navbar-nav navbar-left">
-          <li><%= link_to "Customers", customers_path%></li>
+          <li><%= link_to "Customers", customers_path, :style=>"color: white;"%></li>
         </ul>
       </div>
     </nav>
@@ -36,7 +36,7 @@
         <%= link_to "Login", new_user_session_path, :class => 'navbar-link' %>
      <% end %>
    </div>
-   <br><br><br><br><br>
+   <br><br>
    <div class="container">
       <%= yield %>
     </div>
