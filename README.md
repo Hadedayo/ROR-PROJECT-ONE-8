@@ -12,7 +12,7 @@ In a terminal window, run the following command to clone the sample app reposito
 git clone https://github.com/Hadedayo/ROR-PROJECT-ONE-8
 
 Struggles
-The main difficulty I faced was with my database creation. Initially, I created the first ruby app and deleted it when I had problems with docker. I deleted the first project and built a new ruby app, I gave the new project and database name the exact names to the previous project. I was getting error of an existing database. It turned out that the existing database was clashing with the deleted project. This was overcome by renaming the project and making sure that the existing databases had no connection to the deleted project.
+The main difficulty I faced was with my database creation. Initially, I created the first ruby app and deleted it when I had problems with docker. I deleted the first project and built a new ruby app, I gave the new project and database name the exact names to the previous project. The error I was getting was as a result of an existing database. Through trial and error, it turned out that the existing database was that of the deleted project. This was overcome by researching how to permanently delete databases and making sure that the existing project had a different name.
 
 Sprint 2
-In Sprint 2, I intend on building a comment section for the phone network. A user will be able to see other user's comments and add comments if needed.
+In Sprint 2, I intend on building a comment section for the phone network. A user will be able to see other user's comments and add comments when needed.
