@@ -1,0 +1,15 @@
+.editnetwork {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 20%;
+  }
+  to {
+    margin-left: 0%;
+    width: 25%;
+  }
+}
