@@ -23,9 +23,9 @@
               <tr >
                 <td class="info"><%= network.name %></td>
                 <td class="warning"><%= network.coverage %></td>
-                <td><%= link_to 'Show', network %></td>
-                <td><%= link_to 'Edit', edit_network_path(network) %></td>
-                <td><%= link_to 'Destroy', network, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                <td><%= link_to 'Show', network, :class => 'btn btn-success' %></td>
+                <td><%= link_to 'Edit', edit_network_path(network), :class => 'btn btn-primary' %></td>
+                <td><%= link_to 'Destroy', network, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
               </tr>
             <% end %>
           </tbody>
@@ -33,7 +33,7 @@
       </div>
 
       <br>
-      <div type="button" class="btn btn-warning btn-group-lg">
+      <div type="button" class="btn btn-warning">
         <%= link_to 'New Network', new_network_path %>
       </div>
 
